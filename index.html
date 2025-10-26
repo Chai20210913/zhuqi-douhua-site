@@ -1,32 +1,180 @@
-<!doctype html><html lang="zh-Hant"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>竹崎豆花｜Zhuqi Tofu Pudding</title>
-<link rel="stylesheet" href="style.css">
-</head><body>
-<nav class="nav">
-  <a href="index.html">首頁</a>
-  <a href="menu.html">菜單</a>
-  <a href="explore.html">玩竹崎</a>
-  <a href="news.html">公告</a>
-  <a href="about.html">關於我們</a>
-  <a href="contact.html">聯絡資訊</a>
-</nav>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>竹崎豆花｜Zhuqi Tofu Pudding</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- 導覽列 -->
+  <nav class="nav">
+    <img src="assets/logo.PNG" alt="竹崎豆花 Logo" class="logo">
+    <div class="nav-links">
+      <a href="#home">首頁</a>
+      <a href="#news">公告</a>
+      <a href="#menu">菜單</a>
+      <a href="#location">店鋪位置</a>
+    </div>
+  </nav>
 
-<div class="container">
-  <div class="card">
-    <h1 class="h1">竹崎豆花</h1>
-    <p>在地三十年老味道。手工豆花、綠豆湯、紅豆湯、薏仁湯，自由混搭，各種組合同價 35 元。</p>
-    <a class="btn" href="menu.html">看菜單</a>
-    <a class="btn" href="explore.html" style="background:#e38b29">玩竹崎</a>
-  </div>
+  <!-- 第一頁：主視覺 -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p>經營三十年的在地老店</p>
+      <p>傳承古早味豆花的細緻與香醇</p>
+      <p>堅持手工製作，保留黃豆天然風味</p>
+    </div>
+  </section>
 
-  <div class="grid col-2">
-    <div class="card"><h3>今日公告</h3><p>臨時休息與營業時間變更，請見 <a href="news.html">公告頁</a>。</p></div>
-    <div class="card"><h3>店鋪位置</h3><p>竹崎村市區｜竹崎農會對面</p>
-      <a class="btn" href="contact.html">地圖與聯絡</a></div>
-  </div>
-</div>
+  <!-- 第二頁：公告 -->
+  <section id="news" class="news">
+    <h2>📢 最新公告</h2>
+    <div id="news-container" class="news-container"></div>
+    <div class="pagination">
+      <button id="prev-btn" disabled>← 上一頁</button>
+      <button id="next-btn">下一頁 →</button>
+    </div>
+  </section>
 
-<footer class="footer">© 2025 竹崎豆花</footer>
-</body></html>
+  <!-- 第三頁：菜單 -->
+  <section id="menu" class="menu">
+    <h2>🍧 菜單 MENU</h2>
+    <p class="menu-subtitle">
+      自由搭配・均一價 NT$35<br>
+      豆花可加花生，也能搭配紅豆湯、綠豆湯、薏仁湯。<br>
+      湯品之間也能混合搭配，創造屬於你的味道！
+    </p>
+
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="assets/menu-douhua.jpg" alt="豆花系列">
+        <h3>豆花系列</h3>
+        <ul>
+          <li>原味豆花</li>
+          <li>豆花 + 花生</li>
+          <li>豆花 + 紅豆湯</li>
+          <li>豆花 + 綠豆湯</li>
+          <li>豆花 + 薏仁湯</li>
+          <li>綜合豆花（多種配料一次滿足）</li>
+        </ul>
+      </div>
+
+      <div class="menu-card">
+        <img src="assets/menu-soup.jpg" alt="湯品系列">
+        <h3>湯品系列</h3>
+        <ul>
+          <li>紅豆湯</li>
+          <li>綠豆湯</li>
+          <li>薏仁湯</li>
+          <li>紅豆湯 + 綠豆湯</li>
+          <li>綠豆湯 + 薏仁湯</li>
+          <li>紅豆湯 + 薏仁湯</li>
+        </ul>
+      </div>
+
+      <div class="menu-card highlight">
+        <img src="assets/menu-special.jpg" alt="特選推薦">
+        <h3>特選推薦</h3>
+        <ul>
+          <li>綜合豆花 🍧 最受歡迎！</li>
+          <li>花生豆花 🥜 香濃滑順</li>
+          <li>紅豆薏仁湯 💛 養生首選</li>
+          <li>冰豆花 ❄️ 夏季限定</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第四頁：店鋪位置 -->
+  <section id="location" class="location">
+    <h2>📍 店鋪位置</h2>
+    <p>竹崎村市區，竹崎農會對面</p>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=竹崎豆花&output=embed"
+        width="100%" height="400" style="border:0;" allowfullscreen=""
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <footer class="footer">© 2025 竹崎豆花 Zhuqi Tofu Pudding</footer>
+
+  <!-- 公告 JS -->
+  <script>
+    const newsData = [
+      {
+        title: "🕒 今日營業時間調整",
+        text: "因回診關係，今日營業至下午 5 點，造成不便敬請見諒。",
+        img: "assets/news1.jpg"
+      },
+      {
+        title: "🍧 新推出：綜合豆花",
+        text: "多種配料一次滿足，經典回歸！",
+        img: "assets/news2.jpg"
+      },
+      {
+        title: "☀️ 夏季限定冰豆花",
+        text: "冰鎮豆花搭配手煮糖水，清涼上市！",
+        img: "assets/news3.jpg"
+      },
+      {
+        title: "📅 下週休假公告",
+        text: "10/30（一）暫停營業一日，感謝理解。",
+        img: "assets/news4.jpg"
+      },
+      {
+        title: "💛 感謝支持",
+        text: "竹崎豆花榮獲嘉義在地推薦店家，謝謝大家的喜愛！",
+        img: "assets/news5.jpg"
+      }
+    ];
+
+    const itemsPerPage = 3;
+    let currentPage = 1;
+    const container = document.getElementById("news-container");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    function renderNews() {
+      container.innerHTML = "";
+      const start = (currentPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const pageItems = newsData.slice(start, end);
+
+      pageItems.forEach(item => {
+        const card = document.createElement("div");
+        card.classList.add("news-item");
+        card.innerHTML = `
+          <img src="${item.img}" alt="${item.title}">
+          <div class="news-content">
+            <h4>${item.title}</h4>
+            <p>${item.text}</p>
+          </div>`;
+        container.appendChild(card);
+      });
+
+      prevBtn.disabled = currentPage === 1;
+      nextBtn.disabled = end >= newsData.length;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderNews();
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (currentPage * itemsPerPage < newsData.length) {
+        currentPage++;
+        renderNews();
+      }
+    });
+
+    renderNews();
+  </script>
+
+</body>
+</html>
