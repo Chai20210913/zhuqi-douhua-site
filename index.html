@@ -1,71 +1,28 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>竹崎豆花｜Zhuqi Tofu Pudding</title>
-  <style>
-    body {
-      font-family: "Noto Sans TC", sans-serif;
-      background-color: #fffaf0;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #f2c94c;
-      color: white;
-      text-align: center;
-      padding: 30px 10px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.8;
-    }
-    .menu {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .menu h2 {
-      color: #e38b29;
-      text-align: center;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-      color: #666;
-      margin: 40px 0 20px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>竹崎豆花</h1>
-    <p>在地三十年老味道，香濃滑順的好滋味</p>
-  </header>
+<!doctype html><html lang="zh-Hant"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>竹崎豆花｜Zhuqi Tofu Pudding</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<nav class="nav">
+  <a href="index.html">首頁</a><a href="menu.html">菜單</a>
+  <a href="explore.html">玩竹崎</a><a href="news.html">公告</a>
+  <a href="about.html">關於我們</a><a href="contact.html">聯絡資訊</a>
+</nav>
 
-  <section>
-    <div class="menu">
-      <h2>菜單 MENU</h2>
-      <p>豆花、綠豆湯、紅豆湯、薏仁湯，任意搭配皆可 💛</p>
-      <p>可加花生、也可自由組合各種湯品，一碗均一價 NT$35</p>
-      <p>還有綜合豆花，一次品嚐多種風味 🍧</p>
-    </div>
+<div class="container">
+  <div class="card">
+    <h1 class="h1">竹崎豆花</h1>
+    <p>在地三十年老味道。手工豆花、綠豆湯、紅豆湯、薏仁湯，自由混搭，各種組合同價 35 元。</p>
+    <a class="btn" href="menu.html">看菜單</a>
+    <a class="btn" href="explore.html" style="background:#e38b29">玩竹崎</a>
+  </div>
 
-    <h3 style="text-align:center; margin-top:40px;">營業時間</h3>
-    <p style="text-align:center;">早上 8:30 ～ 晚上 7:00（若臨時休息，當天於粉絲專頁公告）</p>
-  </section>
+  <div class="grid col-2">
+    <div class="card"><h3>今日公告</h3><p>臨時休息與營業時間變更，請見 <a href="news.html">公告頁</a>。</p></div>
+    <div class="card"><h3>店鋪位置</h3><p>竹崎村市區｜竹崎農會對面</p>
+      <a class="btn" href="contact.html">地圖與聯絡</a></div>
+  </div>
+</div>
 
-  <footer>
-    <p>© 2025 竹崎豆花 Zhuqi Tofu Pudding</p>
-  </footer>
-</body>
-</html>
+<footer class="footer">© 2025 竹崎豆花</footer>
+</body></html>
