@@ -8,22 +8,23 @@
 </head>
 <body>
 
- <!-- 導覽列 -->
- <nav class="nav">
-   <img src="assets/logo.PNG" alt="竹崎豆花 Logo" class="logo">
-   <div class="nav-links">
-     <a href="index.html#home">首頁</a>
-     <a href="index.html#news">最新公告</a>
-     <a href="explore.html">玩竹崎</a>
-     <a href="about.html">關於我們</a>
-     <a href="contact.html">聯絡資訊</a>
-   </div>
- </nav>
-
+  <!-- 導覽列 -->
+  <nav class="nav">
+    <img src="assets/logo.PNG" alt="竹崎豆花 Logo" class="logo">
+    <div class="nav-links">
+      <a href="index.html#home">首頁</a>
+      <a href="index.html#news">最新公告</a>
+      <a href="explore.html">玩竹崎</a>
+      <a href="about.html">關於我們</a>
+      <a href="contact.html">聯絡資訊</a>
+    </div>
+  </nav>
 
   <!-- 第一頁：主視覺 -->
   <section id="home" class="hero">
+    <div class="overlay"></div>
     <div class="hero-text">
+      <h1>竹崎豆花</h1>
       <p>經營三十年的在地老店</p>
       <p>傳承古早味豆花的細緻與香醇</p>
       <p>堅持手工製作，保留黃豆天然風味</p>
@@ -106,31 +107,11 @@
   <!-- 公告 JS -->
   <script>
     const newsData = [
-      {
-        title: "🕒 今日營業時間調整",
-        text: "因回診關係，今日營業至下午 5 點，造成不便敬請見諒。",
-        img: "assets/news1.jpg"
-      },
-      {
-        title: "🍧 新推出：綜合豆花",
-        text: "多種配料一次滿足，經典回歸！",
-        img: "assets/news2.jpg"
-      },
-      {
-        title: "☀️ 夏季限定冰豆花",
-        text: "冰鎮豆花搭配手煮糖水，清涼上市！",
-        img: "assets/news3.jpg"
-      },
-      {
-        title: "📅 下週休假公告",
-        text: "10/30（一）暫停營業一日，感謝理解。",
-        img: "assets/news4.jpg"
-      },
-      {
-        title: "💛 感謝支持",
-        text: "竹崎豆花榮獲嘉義在地推薦店家，謝謝大家的喜愛！",
-        img: "assets/news5.jpg"
-      }
+      { title: "🕒 今日營業時間調整", text: "因回診關係，今日營業至下午 5 點，造成不便敬請見諒。", img: "assets/news1.jpg" },
+      { title: "🍧 新推出：綜合豆花", text: "多種配料一次滿足，經典回歸！", img: "assets/news2.jpg" },
+      { title: "☀️ 夏季限定冰豆花", text: "冰鎮豆花搭配手煮糖水，清涼上市！", img: "assets/news3.jpg" },
+      { title: "📅 下週休假公告", text: "10/30（一）暫停營業一日，感謝理解。", img: "assets/news4.jpg" },
+      { title: "💛 感謝支持", text: "竹崎豆花榮獲嘉義在地推薦店家，謝謝大家的喜愛！", img: "assets/news5.jpg" }
     ];
 
     const itemsPerPage = 3;
@@ -162,21 +143,16 @@
     }
 
     prevBtn.addEventListener("click", () => {
-      if (currentPage > 1) {
-        currentPage--;
-        renderNews();
-      }
+      if (currentPage > 1) { currentPage--; renderNews(); }
     });
-
     nextBtn.addEventListener("click", () => {
-      if (currentPage * itemsPerPage < newsData.length) {
-        currentPage++;
-        renderNews();
-      }
+      if (currentPage * itemsPerPage < newsData.length) { currentPage++; renderNews(); }
     });
-
     renderNews();
   </script>
+
+</body>
+</html>
 
 </body>
 </html>
